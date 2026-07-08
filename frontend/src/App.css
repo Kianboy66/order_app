@@ -1,0 +1,116 @@
+:root {
+    --fb-bg: #1f2937;
+    /* slate-800 */
+    --fb-border: #667eea;
+    /* amber-500 */
+    --fb-cta: #22c55e;
+    /* green-500 */
+    --fb-cart: #f59e0b;
+    /* amber-500 */
+    --fb-text: #f8fafc;
+    /* slate-50 */
+    --fb-muted: #cbd5e1;
+    /* slate-300 */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'vazir-FD', system-ui, -apple-system, sans-serif;
+    background: #f5f5f5;
+    color: #1a1a1a;
+    direction: rtl;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-content {
+    overflow: hidden;
+}
+
+/* ============================================
+   Content Area
+   ============================================ */
+.content {
+    flex: 1;
+    max-width: 1400px;
+    width: 100%;
+}
+
+/* ============================================
+   Empty State
+   ============================================ */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666666;
+}
+
+.empty-state p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+.login-container {
+    width: 50vw;
+    margin: 20vh 25vw;
+    text-align: center;
+}
+
+.login-container buttom {
+    margin: 22px;
+}
+
+.product-card--selected {
+    background: linear-gradient(to right, green, transparent);
+    border: 1px solid rgb(1, 87, 1);
+}
+
+.product-card--available {
+    background: linear-gradient(to right, yellow, transparent);
+    border: 1px solid rgb(219, 219, 1);
+}
+
+.product-card--production {
+    background: linear-gradient(to right, red, transparent);
+    border: 1px solid rgb(214, 1, 1);
+}
+
+.product-card--unavailable {
+    background: linear-gradient(to right, gray, transparent);
+    border: 1px solid rgb(104, 104, 104);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .app-header h1 {
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .app-header {
+        padding: 12px 15px;
+    }
+
+    .app-header h1 {
+        font-size: 18px;
+    }
+}
