@@ -1,0 +1,512 @@
+@font-face {
+    font-family: 'vazir-FD';
+    src: url('Vazir-Bold-FD_p30download.com.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --drawer-offset: 0px;
+    --card-bg: #ffffff;
+    --sum-bg: #f8f9fa;
+    --bd: #e0e0e0;
+    --txt-1: #1a1a1a;
+    --txt-2: #666666;
+    --fb-bg: #1f2937;
+    /* slate-800 */
+    --fb-border: #667eea;
+    /* amber-500 */
+    --fb-cta: #22c55e;
+    /* green-500 */
+    --fb-cart: #f59e0b;
+    /* amber-500 */
+    --fb-text: #f8fafc;
+    /* slate-50 */
+    --fb-muted: #cbd5e1;
+    /* slate-300 */
+}
+
+
+
+
+
+/* گرید دو ستونه دسکتاپ */
+.product-grid {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(32%, 1fr));
+    gap: 4px;
+    width: -webkit-fill-available;
+    transition: width .28s ease, padding .28s ease;
+    padding: 10px 15px;
+}
+
+
+.tone--green {
+    background: rgba(16, 185, 129, .22);
+}
+
+.tone--amber {
+    background: rgba(245, 158, 11, .52);
+}
+
+.tone--rose {
+    background: rgba(244, 63, 94, .18);
+}
+
+
+/* =====================================
+    استایل کارت جدید
+====================================== */
+/* کارت محصول */
+.product-card, .product-item {
+    transition: width .28s ease, padding .28s ease;
+    background: #dfe2d5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #cfd3c3;
+    justify-content: flex-start;
+}
+
+.row__first--cart {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.product-image-section {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.product-image-box {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.product-info {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.info-row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    min-width: 100%;
+    gap: 10px;
+    position: relative;
+    font-size: 13px;
+}
+
+.product-stock {
+    color: #444;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding: 0 30% 5px 0;
+    margin-top: -6px;
+}
+
+.product-code {
+    display: block;
+    color: #444;
+    font-weight: bold;
+    letter-spacing: 2px;
+    /* text-shadow: 0.6px -0.5px 0.5px #ce9b6e; */
+}
+
+.product-name {
+    display: inline-block;
+    color: #444;
+    flex-wrap: wrap;
+    font-weight: bolder;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    /* text-shadow: 0.6px -0.5px 0.5px #ed6e00; */
+}
+
+/*=======  order  =======*/
+.product-order {
+    height: 100%;
+    width: 50%;
+    min-width: 50%;
+    display: flex;
+    margin: auto;
+}
+
+.quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    /* background: rgb(124, 81, 81); */
+}
+
+.counter-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.counter-label {
+    display: flex;
+    flex-direction: row;
+    font-size: 11px;
+    color: #555;
+    font-weight: bold;
+    /* min-width: 90px; */
+    gap: 10px;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 16px;
+    margin: 2px;
+}
+
+.counter button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: #96aa00;
+    color: #fff;
+    font-size: 10px;
+    align-content: center;
+    cursor: pointer;
+}
+
+.counter input {
+    width: 30px;
+    height: 20px;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    font-size: 12px;
+    background: #fff;
+    outline: none;
+}
+
+.cost {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.price-title {
+    color: #555;
+    font-size: 10px;
+    font-weight: bold;
+    padding-right: 9px;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-top: 2px;
+    text-align: right;
+}
+
+.unit-price {
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.total-price {
+    border-radius: 0 0 10px 10px;
+}
+
+.price-value {
+    font-size: 12px;
+    font-weight: bold;
+    color: #111;
+    direction: rtl;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 5px;
+}
+
+.more__info {
+    display: flex;
+    margin: 16px 0 85px 0;
+    justify-content: center;
+}
+
+.more__info button {
+    margin-bottom: 100px;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.order-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: wheat;
+}
+
+.order-table th {
+    padding: 8px;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-table td {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    /* مشابه عکسی که فرستادی */
+    height: 50px;
+    /* یک ارتفاع ثابت و منطقی */
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.order-table th:first-child,
+.order-table td:first-child {
+    text-align: right;
+    border: #111 1px solid;
+}
+
+.order-table th:nth-child(2),
+.order-table td:nth-child(2),
+.order-table th:nth-child(3),
+.order-table td:nth-child(3) {
+    text-align: center;
+    border: #111 1px solid;
+}
+
+.order-table td:last-child {
+    white-space: nowrap;
+    /* جلوگیری از رفتن ریال به خط بعد */
+    font-size: clamp(10px, 1.2vw, 14px);
+    /* فونت بین ۱۰ تا ۱۴ پیکسل شناور می‌شود */
+    direction: rtl;
+}
+
+.order-table td:first-child {
+    max-width: 150px;
+    /* یا هر مقداری که مناسب فضای توست */
+    font-size: clamp(11px, 1.1vw, 13px);
+    line-height: 1.2;
+}
+
+.price__column span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.order-table tbody tr:hover {
+    background: #fafafa;
+}
+
+.price__column {
+    background: #ccc;
+}
+
+
+/* =========================================
+   PRODUCT GRID / MOBILE
+========================================= */
+@media (min-width: 1024px) {
+    .product-grid .product-card * {
+        transform: scale(0.93) !important;
+        gap: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    * {
+        /* font-size: 12px; */
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(50%, 1fr));
+        gap: 10px;
+        padding: 10px 8px;
+    }
+
+    .quantity {
+        width: auto;
+    }
+
+}
+
+@media (max-width: 950px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(48%, 2fr));
+        margin-top: 130px;overflow-x: hidden;
+    }
+
+    .row__first--cart {
+        display: grid;
+        min-height: 14dvh;
+        max-height: 15dvh;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+        border-bottom: 1px solid #50229789;
+        padding-bottom: 7px;
+    }
+
+    .product-card {
+        display: grid;
+        min-width: 47dvw;
+        max-width: 48dvw;
+        min-height: 33dvh;
+        max-height: 35dvh;
+    }
+
+    .product-image-section {
+        max-width: 50px;
+        max-height: 50px;
+        position: relative;
+        top: 16%;
+        right: 9px;
+        border-radius: 50px;
+        overflow: hidden;
+        width: 50px;
+    }
+
+    .product-image-box {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        border: 1px solid #fb8000;
+        border-radius: 50px;
+        box-shadow: #f80 0 0 15px 1.5px;
+        align-items: center;
+    }
+
+    .product-info {
+        width: 120%;
+        height: 10dvh;
+        position: relative;
+        right: -20px;
+        top: -10px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .info-row {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .product-order {
+        display: flex;
+        flex-direction: column;
+        grid-column: span 2;
+        padding: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* هر ردیف (مثلاً ردیف کارتن) */
+    .counter-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 2px 0;
+    }
+
+
+    .counter-label {
+        font-size: 13px !important;
+        color: #444;
+        display: flex;
+        gap: 5px;
+        min-width: auto;
+    }
+
+    /* باکس دکمه‌های + و - */
+    .counter {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .counter button {
+        width: 28 !important;
+        height: 20px !important;
+        font-size: 18px !important;
+        background: #96aa00;
+        color: white;
+        border: none;
+    }
+
+    .counter input {
+        width: 25px !important;
+        height: 18px !important;
+        font-size: 14px !important;
+        border: none;
+        text-align: center;
+    }
+
+    /* بخش قیمت واحد و قیمت کل */
+    .cost {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* margin-top: 5px;
+        padding-top: 8px; */
+        border-top: 1px solid #ddd;
+        width: 100%;
+    }
+
+    .unit-price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .price-title {
+        font-size: 10px;
+        color: #777;
+    }
+
+    .price-value {
+        font-size: 13px !important;
+        font-weight: bold;
+    }
+
+    .total-price strong {
+        font-size: 16px !important;
+        color: #222;
+    }
+}
