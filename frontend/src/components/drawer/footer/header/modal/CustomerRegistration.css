@@ -1,0 +1,176 @@
+.cr-hamburger {
+  position: fixed;
+  top: 9px;
+  right: 20px;
+  z-index: 999;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cr-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  direction: rtl;
+}
+
+.cr-modal {
+  background: white;
+  width: 95%;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: crFade 0.3s ease;
+}
+
+.cr-header {
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cr-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cr-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cr-form {
+  padding: 20px;
+}
+
+.cr-group {
+  margin-bottom: 10px;
+}
+
+.cr-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+  font-size: 14px;
+}
+
+.cr-input {
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fcfcfc;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.cr-input:focus {
+  border-color: #6366f1;
+  outline: none;
+  background: white;
+}
+
+.cr-radio-box {
+  display: flex;
+  gap: 10px;
+}
+
+.cr-radio-label {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 13px;
+}
+
+.cr-radio-label.active {
+  background: #f0f0ff;
+  border-color: #6366f1;
+  color: #6366f1;
+  font-weight: bold;
+}
+
+.cr-radio-label input {
+  display: none;
+}
+
+.cr-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cr-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cr-input {
+  font-size: 13px;
+}
+
+.cr-btn {
+  flex: 1;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.cr-submit {
+  background: #6366f1;
+  color: white;
+}
+
+.cr-cancel {
+  background: #eee;
+  color: #666;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 13px;
+}
+
+@keyframes crFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .cr-overlay {
+    align-items: flex-end;
+  }
+
+  .cr-modal {
+    border-radius: 20px 20px 0 0;
+  }
+}
