@@ -141,3 +141,53 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# dependencies
+frontend/node_modules/
+config/
+data/
+external/
+routes/
+9269665710b2b7a6b3cc.ttf
+advie1.jpeg
+bundle.js
+bundle.js.LICENSE.txt
+index.v1.php
+profile.png
+proposal-gard.html
+test-logger.php
+قرارداد.txt
+
+# build output
+frontend/dist/
+public/
+build/
+out/
+
+# env files
+.env
+.env.local
+.env.*.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# backend/temp
+backend/
+server/
+api/
+*.log
+
+# cache/files
+*.cache
+customers_cache.json
