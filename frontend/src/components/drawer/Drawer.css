@@ -1,0 +1,296 @@
+:root {
+    --fb-bg: #1f2937;
+    /* slate-800 */
+    --fb-border: #667eea;
+    /* amber-500 */
+    --fb-cta: #22c55e;
+    /* green-500 */
+    --fb-cart: #f59e0b;
+    /* amber-500 */
+    --fb-text: #f8fafc;
+    /* slate-50 */
+    --fb-muted: #cbd5e1;
+    /* slate-300 */
+}
+
+.drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 200;
+}
+
+.drawer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 320px;
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 300;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.drawer.open {
+    right: 0;
+}
+
+.drawer-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.drawer-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.drawer-close-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 24px;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drawer-close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.drawer-menu {
+    flex: 1;
+    padding: 15px 0;
+}
+
+.menu-section {
+    margin-bottom: 5px;
+}
+
+.menu-item {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #333;
+    font-size: 15px;
+    text-align: right;
+    position: relative;
+}
+
+.menu-item:hover {
+    background: #f5f5f5;
+}
+
+.menu-item.active {
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
+    border-right: 3px solid var(--fb-border);
+    color: #667eea;
+    font-weight: bold;
+}
+
+.menu-icon {
+    font-size: 22px;
+    min-width: 24px;
+    text-align: center;
+}
+
+.menu-text {
+    flex: 1;
+}
+
+.arrow {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    color: #999;
+}
+
+.arrow.rotated {
+    transform: rotate(-90deg);
+}
+
+.badge {
+    background: #ff4757;
+    color: white;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #f9f9f9;
+}
+
+.submenu.open {
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+.submenu-item {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 12px 20px 12px 60px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #555;
+    font-size: 14px;
+    text-align: right;
+}
+
+.submenu-group {
+    background: rgba(120, 120, 120, 0.1);
+}
+
+.submenu-item:hover {
+    background: #efefef;
+    color: #667eea;
+}
+
+.submenu-item.active {
+    background: var(--fb-border);
+    color: white;
+    font-weight: bold;
+}
+
+.drawer__third-level {
+    background-color: #0d69c5;
+    /* یه خاکستری خیلی ملایم */
+    border-right: 3px solid var(--fb-border);
+    /* خط راهنما */
+    padding-right: 15px;
+    margin-right: 10px;
+    /* فاصله از لبه */
+}
+
+.drawer__button--child {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    color: #4b5563;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: right;
+    transition: color 0.2s;
+}
+
+.drawer__button--child:hover {
+    color: var(--fb-border);
+    font-weight: bold;
+}
+
+.drawer__button--sub--deactive {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 12px 40px 12px 20px;
+    color: #64748b;
+    text-align: right;
+    cursor: pointer;
+}
+
+.submenu-icon {
+    font-size: 16px;
+}
+
+.drawer-divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 15px 20px;
+}
+
+.logout-btn {
+    color: #ff4757;
+}
+
+.logout-btn:hover {
+    background: #fff5f5;
+}
+
+.drawer-login-message {
+    padding: 40px 20px;
+    text-align: center;
+    color: #999;
+}
+
+.drawer-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+}
+
+.drawer-footer p {
+    margin: 0;
+}
+
+/* انیمیشن ورود آیتم‌ها */
+.drawer.open .menu-item,
+.drawer.open .submenu-item {
+    animation: slideInRight 0.3s ease forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* رسپانسیو */
+@media (max-width: 768px) {
+    .drawer {
+        width: 280px;
+        right: -280px;
+    }
+}
