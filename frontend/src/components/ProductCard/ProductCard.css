@@ -13,35 +13,18 @@
     --bd: #e0e0e0;
     --txt-1: #1a1a1a;
     --txt-2: #666666;
-    --fb-bg: #1f2937;
-    /* slate-800 */
-    --fb-border: #667eea;
-    /* amber-500 */
-    --fb-cta: #22c55e;
-    /* green-500 */
-    --fb-cart: #f59e0b;
-    /* amber-500 */
-    --fb-text: #f8fafc;
-    /* slate-50 */
-    --fb-muted: #cbd5e1;
-    /* slate-300 */
 }
-
-
-
-
 
 /* گرید دو ستونه دسکتاپ */
 .product-grid {
-    margin-top: 80px;
     display: grid;
     grid-template-columns: repeat(3, minmax(32%, 1fr));
     gap: 4px;
     width: -webkit-fill-available;
-    transition: width .28s ease, padding .28s ease;
+    margin-top: 80px;
     padding: 10px 15px;
+    transition: width .28s ease, padding .28s ease;
 }
-
 
 .tone--green {
     background: rgba(16, 185, 129, .22);
@@ -55,19 +38,19 @@
     background: rgba(244, 63, 94, .18);
 }
 
-
 /* =====================================
     استایل کارت جدید
 ====================================== */
 /* کارت محصول */
-.product-card, .product-item {
-    transition: width .28s ease, padding .28s ease;
-    background: #dfe2d5;
-    border-radius: 10px;
+.product-card,
+.product-item {
     display: flex;
     align-items: center;
-    border: 1px solid #cfd3c3;
     justify-content: flex-start;
+    background: #dfe2d5;
+    border: 1px solid #cfd3c3;
+    border-radius: 10px;
+    transition: width .28s ease, padding .28s ease;
 }
 
 .row__first--cart {
@@ -76,78 +59,75 @@
 }
 
 .product-image-section {
+    position: relative;
     width: 100px;
     height: 100px;
-    position: relative;
 }
 
 .product-image-box {
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    border: 2px solid #222;
-    border-radius: 10px;
-    overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     object-fit: cover;
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 10px;
 }
 
 .product-info {
-    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    height: 90%;
     padding-right: 10px;
     padding-left: 10px;
     text-align: center;
 }
 
 .info-row {
-    width: 100%;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     min-width: 100%;
+    width: 100%;
     gap: 10px;
-    position: relative;
     font-size: 13px;
 }
 
 .product-stock {
-    color: #444;
-    font-weight: bold;
-    padding-bottom: 5px;
-    padding: 0 30% 5px 0;
     margin-top: -6px;
+    padding: 0 30% 5px 0;
+    font-weight: bold;
+    color: #444;
 }
 
 .product-code {
     display: block;
-    color: #444;
     font-weight: bold;
     letter-spacing: 2px;
-    /* text-shadow: 0.6px -0.5px 0.5px #ce9b6e; */
+    color: #444;
 }
 
 .product-name {
     display: inline-block;
-    color: #444;
-    flex-wrap: wrap;
-    font-weight: bolder;
     padding-top: 7px;
     padding-bottom: 5px;
-    /* text-shadow: 0.6px -0.5px 0.5px #ed6e00; */
+    flex-wrap: wrap;
+    font-weight: bolder;
+    color: #444;
 }
 
 /*=======  order  =======*/
 .product-order {
-    height: 100%;
+    display: flex;
     width: 50%;
     min-width: 50%;
-    display: flex;
+    height: 100%;
     margin: auto;
 }
 
@@ -156,7 +136,6 @@
     flex-direction: column;
     align-items: baseline;
     justify-content: center;
-    /* background: rgb(124, 81, 81); */
 }
 
 .counter-row {
@@ -170,40 +149,39 @@
 .counter-label {
     display: flex;
     flex-direction: row;
-    font-size: 11px;
-    color: #555;
-    font-weight: bold;
-    /* min-width: 90px; */
     gap: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #555;
 }
 
 .counter {
     display: flex;
     align-items: center;
+    margin: 2px;
     overflow: hidden;
     border-radius: 16px;
-    margin: 2px;
 }
 
 .counter button {
     width: 20px;
     height: 20px;
-    border: none;
-    background: #96aa00;
-    color: #fff;
     font-size: 10px;
-    align-content: center;
+    color: #fff;
+    background: #96aa00;
+    border: none;
     cursor: pointer;
+    align-content: center;
 }
 
 .counter input {
     width: 30px;
     height: 20px;
-    border: none;
+    font-size: 12px;
     text-align: center;
     justify-content: center;
-    font-size: 12px;
     background: #fff;
+    border: none;
     outline: none;
 }
 
@@ -215,20 +193,20 @@
 }
 
 .price-title {
-    color: #555;
+    padding-top: 2px;
+    padding-right: 9px;
+    padding-bottom: 0;
+    padding-left: 0;
     font-size: 10px;
     font-weight: bold;
-    padding-right: 9px;
-    padding-left: 0;
-    padding-bottom: 0;
-    padding-top: 2px;
     text-align: right;
+    color: #555;
 }
 
 .unit-price {
-    border-radius: 10px 10px 0 0;
     display: flex;
     flex-direction: column;
+    border-radius: 10px 10px 0 0;
 }
 
 .total-price {
@@ -236,19 +214,19 @@
 }
 
 .price-value {
-    font-size: 12px;
-    font-weight: bold;
-    color: #111;
-    direction: rtl;
     padding-top: 0;
     padding-right: 0;
     padding-left: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    direction: rtl;
+    color: #111;
 }
 
 .more__info {
     display: flex;
-    margin: 16px 0 85px 0;
     justify-content: center;
+    margin: 16px 0 85px 0;
 }
 
 .more__info button {
@@ -257,14 +235,14 @@
 
 .order-table {
     width: 100%;
-    border-collapse: collapse;
     margin-bottom: 12px;
     font-size: 14px;
+    border-collapse: collapse;
 }
 
 .order-table thead {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: wheat;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .order-table th {
@@ -274,13 +252,11 @@
 }
 
 .order-table td {
-    padding: 8px;
-    border-bottom: 1px solid #eee;
-    /* مشابه عکسی که فرستادی */
     height: 50px;
-    /* یک ارتفاع ثابت و منطقی */
+    padding: 8px;
     vertical-align: middle;
     overflow: hidden;
+    border-bottom: 1px solid #eee;
 }
 
 .order-table th:first-child,
@@ -298,16 +274,13 @@
 }
 
 .order-table td:last-child {
-    white-space: nowrap;
-    /* جلوگیری از رفتن ریال به خط بعد */
     font-size: clamp(10px, 1.2vw, 14px);
-    /* فونت بین ۱۰ تا ۱۴ پیکسل شناور می‌شود */
     direction: rtl;
+    white-space: nowrap;
 }
 
 .order-table td:first-child {
     max-width: 150px;
-    /* یا هر مقداری که مناسب فضای توست */
     font-size: clamp(11px, 1.1vw, 13px);
     line-height: 1.2;
 }
@@ -326,7 +299,6 @@
     background: #ccc;
 }
 
-
 /* =========================================
    PRODUCT GRID / MOBILE
 ========================================= */
@@ -339,10 +311,6 @@
 }
 
 @media (max-width: 1024px) {
-    * {
-        /* font-size: 12px; */
-    }
-
     .product-grid {
         grid-template-columns: repeat(2, minmax(50%, 1fr));
         gap: 10px;
@@ -352,7 +320,6 @@
     .quantity {
         width: auto;
     }
-
 }
 
 @media (max-width: 950px) {
@@ -362,20 +329,20 @@
 }
 
 @media (max-width: 600px) {
-
     .product-grid {
         grid-template-columns: repeat(2, minmax(48%, 2fr));
-        margin-top: 130px;overflow-x: hidden;
+        margin-top: 130px;
+        overflow-x: hidden;
     }
 
     .row__first--cart {
         display: grid;
-        min-height: 14dvh;
-        max-height: 15dvh;
         grid-template-columns: 1fr 3fr;
         align-items: center;
-        border-bottom: 1px solid #50229789;
+        min-height: 14dvh;
+        max-height: 15dvh;
         padding-bottom: 7px;
+        border-bottom: 1px solid #50229789;
     }
 
     .product-card {
@@ -387,85 +354,83 @@
     }
 
     .product-image-section {
-        max-width: 50px;
-        max-height: 50px;
         position: relative;
         top: 16%;
         right: 9px;
-        border-radius: 50px;
-        overflow: hidden;
         width: 50px;
+        max-width: 50px;
+        max-height: 50px;
+        overflow: hidden;
+        border-radius: 50px;
     }
 
     .product-image-box {
-        object-fit: cover;
+        display: flex;
+        align-items: center;
         width: 100%;
         height: 100%;
         min-height: 100%;
+        object-fit: cover;
         border: 1px solid #fb8000;
         border-radius: 50px;
         box-shadow: #f80 0 0 15px 1.5px;
-        align-items: center;
     }
 
     .product-info {
+        position: relative;
+        top: -10px;
+        right: -20px;
+        display: inline-block;
         width: 120%;
         height: 10dvh;
-        position: relative;
-        right: -20px;
-        top: -10px;
-        display: inline-block;
         text-align: center;
     }
 
     .info-row {
-        text-align: center;
         font-size: 16px;
+        text-align: center;
     }
 
     .product-order {
         display: flex;
         flex-direction: column;
         grid-column: span 2;
-        padding: 8px;
         width: 100%;
+        padding: 8px;
         box-sizing: border-box;
     }
 
-    /* هر ردیف (مثلاً ردیف کارتن) */
     .counter-row {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         width: 100%;
         padding: 2px 0;
     }
 
-
     .counter-label {
-        font-size: 13px !important;
-        color: #444;
         display: flex;
         gap: 5px;
         min-width: auto;
+        font-size: 13px !important;
+        color: #444;
     }
 
-    /* باکس دکمه‌های + و - */
     .counter {
         display: flex;
         align-items: center;
+        background: #fff;
+        overflow: hidden;
         border: 1px solid #ccc;
         border-radius: 8px;
-        overflow: hidden;
-        background: #fff;
     }
 
     .counter button {
         width: 28 !important;
         height: 20px !important;
         font-size: 18px !important;
-        background: #96aa00;
         color: white;
+        background: #96aa00;
         border: none;
     }
 
@@ -473,20 +438,17 @@
         width: 25px !important;
         height: 18px !important;
         font-size: 14px !important;
-        border: none;
         text-align: center;
+        border: none;
     }
 
-    /* بخش قیمت واحد و قیمت کل */
     .cost {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
-        /* margin-top: 5px;
-        padding-top: 8px; */
-        border-top: 1px solid #ddd;
+        justify-content: space-between;
         width: 100%;
+        border-top: 1px solid #ddd;
     }
 
     .unit-price {
@@ -498,15 +460,5 @@
     .price-title {
         font-size: 10px;
         color: #777;
-    }
-
-    .price-value {
-        font-size: 13px !important;
-        font-weight: bold;
-    }
-
-    .total-price strong {
-        font-size: 16px !important;
-        color: #222;
     }
 }
